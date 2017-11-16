@@ -48,7 +48,7 @@
 
   <div class="field">
     <%= form.label :category_id %>
-    <%= form.number_field :category_id, id: :product_category_id %>
+    <%= form.select :category_id, @categories_names_and_ids, {include_blank: "Please select a value."}%>
   </div>
 
   <div class="actions">
