@@ -1,5 +1,7 @@
 # README
 
+This is Jill's README. So far, Jill is keeping up! 
+
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
