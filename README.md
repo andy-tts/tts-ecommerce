@@ -21,7 +21,7 @@ Things you may want to cover:
 
 * Deployment instructions
 
-* Anything but your eyes
+* Anything but your ears and eyes
 
 * ...
 
