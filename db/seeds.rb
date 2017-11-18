@@ -26,3 +26,18 @@ Product.create(name: 'Spatula', price: 4, quantity: 30,
 	description:'An elegant cooking tool', brand: 'Cuisinart', 
 	rating: 3,
 	category: categories[2])
+
+Product.create(name: 'Busy Buddy Twist -n- Treat', price: 5, quantity: 30, 
+	description:'Keep your dog busy', brand: 'Premiere', 
+	rating: 5,
+	category: categories[3])
+
+Product.create(name: 'Shower radio', price: 40, quantity: 30, 
+	description:'For singing in the shower', brand: 'Sony', 
+	rating: 3,
+	category: categories[0])
+
+Product.create(name: 'Convertible Crib', price: 259	, quantity: 10, 
+	description:'white crib with storage', brand: 'Graco', 
+	rating: 4,
+	category: categories[1])
