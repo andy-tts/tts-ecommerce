@@ -4,8 +4,10 @@ class StorefrontController < ApplicationController
   end
 
   def items_by_category
+  	@category = Category.find(params[:category_id])
   end
 
   def items_by_brand
+  	
   end
 end
