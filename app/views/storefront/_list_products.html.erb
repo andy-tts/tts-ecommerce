@@ -1,0 +1,19 @@
+_list_products.html.erb
+<div class="row">
+<% products.each do |product| %>
+    <div class="col-md-4">
+      <div class="well center-it">
+        <% if product.image.present? %>
+        	<p><%= image_tag product.image.url, size: "100" %></p>
+    	<% end %>
+        <h3><%= link_to product.name, product %></h3>
+        <p><%= number_to_currency product.price %></p>
+        <p>
+          <a href='#' data-toggle="modal" data-target="#myModal_<%= product.id %>">
+            <span class='glyphicon glyphicon-plus'></span>More Info
+          </a>
+        </p>
+      </div>
+    </div>
+  <% end %>
+</div>

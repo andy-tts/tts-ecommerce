@@ -7,9 +7,11 @@ class StorefrontController < ApplicationController
   def items_by_category
   	puts params
   	@category = Category.find(params[:category_id])
-  	
+
   end
 
   def items_by_brand
+  	@brand = params[:brand]
+  	@products = Product.where(brand: @brand)
   end
 end
