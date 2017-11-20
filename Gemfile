@@ -39,6 +39,7 @@ gem 'font-awesome-rails'
 gem 'devise'
 gem 'carrierwave'
 gem 'cancancan'
+gem 'devise-encryptable'
 
 gem 'wdm', '~> 0.1.0' if Gem.win_platform?
 
