@@ -8,6 +8,7 @@ class StorefrontController < ApplicationController
   end
 
   def items_by_brand
-  	
+  	@brand = params[:brand]
+  	@products = Product.where(brand: @brand)
   end
 end
