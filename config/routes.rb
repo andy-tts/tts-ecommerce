@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  post 'add_to_cart' => 'cart#add_to_cart'
+
+  get 'view_order' => 'cart#view_order'
+
+  get 'checkout' => 'cart#checkout'
+
   get 'storefront/all_items'
 
   get 'items_by_category' => 'storefront#items_by_category'
