@@ -10,6 +10,7 @@ class CartController < ApplicationController
   end
 
   def view_order
+  	@line_items = LineItem.all
   end
 
   def checkout

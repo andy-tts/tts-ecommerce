@@ -1,2 +1,23 @@
-<h1>Cart#view_order</h1>
-<p>Find me in app/views/cart/view_order.html.erb</p>
+<h2>My Cart </h2>
+
+<table class="table">
+	<thead>
+		<tr>
+			<th>Product name</th>
+			<th>Qty</th>
+			<th>Price</th>
+			<th>Total Price</th>
+		  </tr>
+	</thead>
+    <tbody>
+	  <% @line_items.each do |line_item| %>
+	  	<tr>
+			<td><%= line_item.product.name %></td>
+			<td><%=  line_item.quantity %></td>
+			<td><%= number_to_currency line_item.product.price %></td>
+			<td><%= number_to_currency line_item.line_item_total %></td>
+			</tr>
+		<% end %>
+    </tbody>
+
+</table>
