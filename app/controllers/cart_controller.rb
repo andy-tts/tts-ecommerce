@@ -15,5 +15,24 @@ class CartController < ApplicationController
   end
 
   def checkout
+    line_items = LineItem.all
+    @order = Order.create(
+      user_id: current_user.id,
+      line_items: line_items,
+      subtotal: 0
+    )    
+    line_items.each do |line_item| 
+      if line_item.quantity.present?
+        product = line_item.product
+        new_quantity = product.quantity - line_item.quantity
+        product.update(quantity: new_quantity)
+      end     
+      @order.subtotal += line_item.line_item_total  
+    end
+    @order.update(sales_tax: (@order.subtotal * 0.0575))
+    @order.update(total: (@order.sales_tax + @order.subtotal))
+    @order.save
+    
+
   end
 end
