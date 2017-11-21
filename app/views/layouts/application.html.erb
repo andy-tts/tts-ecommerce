@@ -13,6 +13,9 @@
       <% if user_signed_in? %>
         <nav class="navbar ">
           <div class="collapse navbar-collapse">
+            <div class="navbar-nav pull-left">
+              <%= link_to "View Cart", view_order_path %>
+            </div>
             <div class="navbar-nav pull-right">
               <span class="nav-item"><%= current_user.email %></span>
               <%= link_to "Edit Profile", edit_user_registration_path, class: 'nav-item nav-link' %>
