@@ -4,4 +4,9 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable, :encryptable,
          :recoverable, :rememberable, :trackable, :validatable
   has_many :orders
+
+  def admin?
+  	role == 'admin'
+  end
+
 end

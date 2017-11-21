@@ -29,6 +29,8 @@ class CartController < ApplicationController
   		end
   		@order.subtotal += line_item.line_item_total
   	end
+  	@order.update(sales_tax: (@order.subtotal * 0.0575))
+  	@order.update(total: (@order.sales_tax + @order.subtotal))
   	@order.save
   end
 end
